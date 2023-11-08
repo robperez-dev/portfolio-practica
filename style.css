@@ -1,0 +1,299 @@
+:root {
+  --rojo: #e50914;
+  --blanco: white;
+  --gris: #303030;
+  --gris-f: #757575;
+  --negro: black;
+  --tipo-titular: 'Playfair Display', serif;
+  --tipo-principal: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: var(--tipo-principal);
+  font-size: 100%;
+  min-height: 100vh;
+  background-color: var(--blanco);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.circulos {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: lightblue;
+  z-index: 1;
+}
+
+.circulos .circulo {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+.circulos .circulo1 {
+  top: 0%;
+  left: 0%;
+}
+
+.circulos .circulo2 {
+  top: 0%;
+  right: 0%;
+}
+
+.circulos .circulo3 {
+  bottom: 0%;
+  left: 0%;
+}
+
+.circulos .circulo4 {
+  bottom: 0%;
+  right: 0%;
+}
+
+.header {
+  width: 100%;
+  min-height: 5em;
+  padding: 1em 2em;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: lightblue;
+
+  display: none;
+}
+
+.header .h1 {}
+
+.header .h1 .a {}
+
+.header .nav {}
+
+.header .ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .li {
+  margin: 0 1em;
+}
+
+.header .li .a {}
+
+.main {
+  background: lightgray;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.seccion {
+  width: 100%;
+  min-height: 80vh;
+  background: lightblue;
+  /* margin: 1em 0; */
+  padding: 2em;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion .info {
+  font-size: 1.2em;
+}
+
+
+
+.seccion .ul {
+  /* background: red; */
+  margin: 2em 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion .ul .li {
+  /* background: chartreuse; */
+  margin: 0 1em;
+}
+
+.seccion .ul .a {
+  /* background: red; */
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-radius: 50%;
+  padding: 1em 1em 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all .5s ease;
+}
+
+.seccion .ul .a:hover {
+  border-color: black;
+
+}
+
+.seccion .h2 {
+  font-family: var(--tipo-titular);
+  font-weight: 600;
+  font-size: 5em;
+  line-height: 1em;
+}
+
+.seccion .h3 {
+  font-family: var(--tipo-titular);
+  font-size: 3em;
+
+}
+
+.seccion .p {}
+
+.seccion .grid {
+  width: 90%;
+  max-width: 40em;
+  /* background: lightcoral; */
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1em;
+}
+
+.seccion .article {
+  width: 100%;
+  min-height: 20vh;
+  background: lightgoldenrodyellow;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.seccion .a {}
+
+.seccion .figure {
+  width: 100%;
+  background: red;
+}
+
+.seccion .img {
+  width: 100%;
+  background: green;
+}
+
+.seccion .h4 {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5rem);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 1.8rem;
+  font-family: var(--tipo-titular);
+  font-style: italic;
+  opacity: 0;
+  /* transform: translateX(100%); */
+  transform: translatez(1) scale(1.2);
+  transition: all .5s ease;
+}
+
+.seccion .article:hover .h4 {
+  opacity: 1;
+  transform: translatez(1) scale(1);
+  /* transform: translateX(0%); */
+}
+
+.works .h2 {
+  margin: 0 0 1rem;
+}
+
+.about {}
+
+.about .h2 {
+
+  margin: 0 0 2rem;
+}
+
+.about .p {
+  max-width: 40rem;
+  /* background: lightgreen; */
+  margin: 0 0 2rem;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.about .rrss {
+  /* background: lightgreen; */
+  width: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .li {
+  /* background: orange; */
+  margin: 0 1em;
+}
+
+.about .a {}
+
+.about .svg {
+  width: 3em;
+  height: 3em;
+  /* background: red; */
+}
+
+.footer {
+  /* background-color: lightpink; */
+  padding: 2em 0;
+  text-align: center;
+}
+
+.footer .span {}
